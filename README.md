@@ -36,7 +36,8 @@ ADIF files exported from Z3DMR.
 A configurable CSV amateur-radio logbook.
 
 ### To run the application
-After making changes to the **config.yaml** file Run this command:
+After making changes to the **config.yaml** file \
+Run this command:
 ```bash
 ./z3dmr_adif_logbook_maker.py
 ```
