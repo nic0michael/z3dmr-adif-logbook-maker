@@ -26,7 +26,7 @@ The configuration defines:
 ### Project name
 
 **Z3DMR ADIF Logbook Maker**
-
+z3dmr_adif_logbook_maker.py
 ### Input
 
 ADIF files exported from Z3DMR.
@@ -34,6 +34,12 @@ ADIF files exported from Z3DMR.
 ### Output
 
 A configurable CSV amateur-radio logbook.
+
+### To run the application
+After making changes to the **config.yaml** file Run this command:
+```bash
+./
+```
 
 ---
 
