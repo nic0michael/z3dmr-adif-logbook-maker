@@ -12,9 +12,9 @@ date_format: "%Y-%m-%d %H:%M:%S"
 
 input:
   format: ADIF
-  default_file: z3dmr_export.adi
   source:
-    prompt_for_file: false
+    directory: .
+    prompt_for_file: true
 
 output:
   format: CSV
@@ -81,4 +81,3 @@ columns:
     source_fields:
       - COMMENT
     position: 11
-
