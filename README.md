@@ -39,6 +39,9 @@ A configurable CSV amateur-radio logbook.
 After making changes to the **config.yaml** file \
 Run this command:
 ```bash
+# Make Python script executable
+chmod 775 z3dmr_adif_logbook_maker.py
+
 ./z3dmr_adif_logbook_maker.py
 ```
 
