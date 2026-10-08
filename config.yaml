@@ -1,0 +1,84 @@
+callsign: ZS6BVR
+maidenhead_locator: KG44dd58
+dmr_id: 6550430
+qth: Pretoria
+country: South Africa
+
+timezone:
+  local: Africa/Johannesburg
+  logbook: UTC
+
+date_format: "%Y-%m-%d %H:%M:%S"
+
+input:
+  format: ADIF
+  default_file: z3dmr_export.adi
+  source:
+    prompt_for_file: false
+
+output:
+  format: CSV
+  default_file: hamradio_logbook.csv
+
+columns:
+  - name: DateTime
+    source_fields:
+      - QSO_DATE
+      - TIME_ON
+    position: 0
+
+  - name: Callsign
+    source_fields:
+      - CALL
+    position: 1
+
+  - name: Name
+    source_fields:
+      - NAME
+    position: 2
+
+  - name: QTH
+    source_fields:
+      - QTH
+    position: 3
+
+  - name: State
+    source_fields:
+      - STATE
+    position: 4
+
+  - name: Country
+    source_fields:
+      - COUNTRY
+    position: 5
+
+  - name: Mode
+    source_fields:
+      - SUBMODE
+    position: 6
+
+  - name: Propagation
+    source_fields:
+      - PROP_MODE
+    position: 7
+
+  - name: Network
+    source_fields:
+      - APP_Z3DMR_NETWORK
+    position: 8
+
+  - name: Talkgroup
+    source_fields:
+      - APP_Z3DMR_TALKGROUP
+    position: 9
+
+  - name: DMR_ID
+    source_fields:
+      - APP_Z3DMR_DMR_ID
+    position: 10
+
+  - name: Comment
+    source_fields:
+      - COMMENT
+    position: 11
+
