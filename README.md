@@ -6,6 +6,8 @@
 
 Z3DMR is used to record DMR activity and saves logged contacts in ADIF format.
 
+**You will run this in a Linux terminal**
+
 This application reads a Z3DMR ADIF file and creates or updates a CSV logbook containing the fields selected in `config.yaml`.
 
 The application is designed to keep the conversion rules configurable rather than hard-coded into the Python program.
