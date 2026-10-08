@@ -89,18 +89,23 @@ pip install pyyaml
 ```
 
 ### Selecting an ADIF file
+At this point, copy the log files from your Android Downloads folder to a USB 3 Thumb drive, and then to this folder
 
 The application does **not** require a specific ADIF filename to be configured.
 
-For example, if the configured directory contains:
+**Assume we have these files in this directory:**
 
 ```text
 z3dmr-stations-20261006-1947.adi
 z3dmr-stations-20261007-1815.adi
 z3dmr-stations-20261008-0910.adif
 ```
+When we run the application:
+```bash
+./z3dmr_adif_logbook_maker.py
+```
 
-the application displays:
+The application displays:
 
 ```text
 Available ADIF files:
