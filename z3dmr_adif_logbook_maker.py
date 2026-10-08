@@ -1,3 +1,42 @@
+#!/usr/bin/env python3
+"""Z3DMR ADIF Logbook Maker.
+
+Reads an ADIF file exported by Z3DMR and creates a configurable CSV
+logbook using settings from config.yaml.
+"""
+
+from __future__ import annotations
+
+import csv
+import re
+import sys
+from datetime import datetime
+from pathlib import Path
+from typing import Any
+
+try:
+    import yaml
+except ImportError:
+    print("ERROR: PyYAML is required. Install it with: pip install pyyaml")
+    sys.exit(1)
+
+
+CONFIG_FILE = Path("config.yaml")
+
+
+def load_config(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        raise FileNotFoundError(f"Configuration file not found: {path}")
+
+    with path.open("r", encoding="utf-8") as file:
+        config = yaml.safe_load(file) or {}
+
+    if not isinstance(config, dict):
+        raise ValueError("Configuration file must contain a YAML mapping.")
+
+    return config
+
+
 def find_adif_files(directory: Path) -> list[Path]:
     """Return all ADIF files in the configured directory."""
 
@@ -414,3 +453,5 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
